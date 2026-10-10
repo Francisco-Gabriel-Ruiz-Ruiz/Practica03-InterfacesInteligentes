@@ -6,6 +6,10 @@ public class Ej3PlayerStats : MonoBehaviour
 
     private int previousDamage;
 
+    void Start() {
+        previousDamage = damage;
+    }
+
     void Update() {
         if (damage > previousDamage) {
             Debug.Log("Player más fuerte: daño pasó de " + previousDamage + " a " + damage);
