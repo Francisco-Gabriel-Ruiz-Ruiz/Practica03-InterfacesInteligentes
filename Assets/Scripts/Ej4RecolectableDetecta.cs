@@ -12,15 +12,15 @@ public class Ej4RecolectableDetecta : MonoBehaviour
 
         int collectableLayer = LayerMask.NameToLayer("Collectable");
         if (collectableLayer != gameObject.layer) {
-            Debug.LogWarning("Script de recolectable asignado a un objeto sin layer Collectable.");
+            Debug.LogWarning("Script de recolectable asignado a un GameObject sin layer Collectable.");
         }
     }
 
     void OnTriggerEnter(Collider other) {
-        Debug.Log("OnTriggerEnter detectó al gameObject: " + other.name);
+        Debug.Log("OnTriggerEnter detectó al GameObject: " + other.name);
     }
 
     void OnTriggerExit(Collider other) {
-        Debug.Log("OnTriggerExit dejó de detectar al gameObject: " + other.name);
+        Debug.Log("OnTriggerExit dejó de detectar al GameObject: " + other.name);
     }
 }

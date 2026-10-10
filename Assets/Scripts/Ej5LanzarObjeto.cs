@@ -9,12 +9,12 @@ public class Ej5LanzarObjeto : MonoBehaviour
     private float fireInput;
 
     void Start() {
-        if (multiplicadorFuerza == 0f) {
-            Debug.LogWarning("El multiplicador de fuerza es 0 (anula el lanzamiento de objeto).");
+        if (Mathf.Approximately(0f, multiplicadorFuerza)) {
+            Debug.LogWarning("El multiplicador de fuerza es aproximadamente 0 (anula el lanzamiento del GameObject).");
         }
         rigidbody = GetComponent<Rigidbody>();
         if (!rigidbody) {
-            Debug.LogError("¡El objeto a lanzar no tiene Rigidbody!");
+            Debug.LogError("¡El GameObject a lanzar no tiene Rigidbody!");
         }
     }
 
