@@ -30,7 +30,7 @@ Vemos en el GIF que la escena queda prácticamente inmóvil. El cubo, al tener m
 
 ![Demostración Situación 2](GitImages/Situación02-P03-II.gif)
 
-En esta ocasión, la esfera cae por efecto de la gravedad, impacta contra el cubo y lo desestabiliza. Ambos objetos terminan reposando sobre el plano. Al tener ambos masa (por defecto 1), la transferencia de energía en el impacto (`OnCollisionEnter`) es equitativa y la esfera rueda hacia un lado debido a su posición inicial ligeramente descentrada.
+En esta ocasión, la esfera cae por efecto de la gravedad, impacta contra el cubo y lo desestabiliza. Ambos objetos están sobre el plano. Al tener ambos masa (por defecto 1), la transferencia de energía en el impacto es equitativa y la esfera rueda hacia un lado debido a su posición inicial ligeramente descentrada hasta caerse por el plano.
 
 ### Situación 3: Esfera cinemática
 * **Plano:** `Collider`.
@@ -39,7 +39,7 @@ En esta ocasión, la esfera cae por efecto de la gravedad, impacta contra el cub
 
 ![Demostración Situación 3](GitImages/Situación03-P03-II.gif)
 
-El resultado visual es idéntico a la Situación 1: el cubo reposa en el plano y la esfera flota. La diferencia fundamental recae en el concepto: un objeto cinemático tiene `Rigidbody` pero su movimiento no es controlado por el motor de físicas (ignora fuerzas y gravedad), actuando como si tuviera masa infinita ante otros objetos dinámicos.
+El resultado visual es idéntico a la Situación 1: el cubo reposa en el plano y la esfera flota. La diferencia fundamental recae en el concepto: un objeto cinemático (en este caso, la esfera) tiene `Rigidbody` pero su movimiento no es controlado por el motor de físicas (ignora fuerzas y gravedad), sino por código/animaciones (que no están presentes en el experimento).
 
 ### Situación 4: Todo físico (plano dinámico)
 * **Plano:** `Rigidbody` dinámico.
@@ -57,7 +57,7 @@ Toda la escena se desploma hacia el vacío. Al añadir un `Rigidbody` estándar 
 
 ![Demostración Situación 5](GitImages/Situación05-P03-II.gif)
 
-El plano cinemático vuelve a sostener la escena (`Kinematic vs Dynamic` genera colisión). Al caer la esfera, su masa es diez veces superior a la del cubo, por lo que impone su trayectoria. El cubo absorbe el impacto y sale desplazado rápidamente debido a la conservación del momento.
+El plano cinemático vuelve a sostener la escena (`Kinematic vs Dynamic` genera colisión). Al caer la esfera, su masa es diez veces superior a la del cubo, por lo que lo desetabiliza aún más que cuando tenía masa 1.
 
 ### Situación 6: Plano cinemático, esfera x100 masa
 * **Plano:** `Rigidbody` cinemático.
@@ -66,7 +66,7 @@ El plano cinemático vuelve a sostener la escena (`Kinematic vs Dynamic` genera 
 
 ![Demostración Situación 6](GitImages/Situación06-P03-II.gif)
 
-El comportamiento es igual al anterior pero con un efecto exagerado. La diferencia de masa es tan grande (100:1) que la esfera apenas nota el impacto, continuando su caída, mientras que el cubo sale eyectado de forma muy violenta. 
+El comportamiento es igual al anterior pero con un efecto más exagerado. La diferencia de masa es tan grande (100:1) que la esfera apenas nota el impacto, continuando su caída, mientras que el cubo se ve afectado de forma más violenta.
 
 ### Situación 7: Todo físico + Fricción
 * **Plano:** `Rigidbody` dinámico.
@@ -75,7 +75,9 @@ El comportamiento es igual al anterior pero con un efecto exagerado. La diferenc
 
 ![Demostración Situación 7](GitImages/Situación07-P03-II.gif)
 
-Al igual que en la situación 4, todo cae debido a que el plano es dinámico. Sin embargo, gracias al material físico aplicado a la esfera con alta fricción, esta no resbala sobre la superficie del cubo. Se queda "pegada" a él y ambos caen de manera más compacta.
+Al igual que en la situación 4, todo cae debido a que el plano es dinámico. Sin embargo, gracias al material físico aplicado a la esfera con alta fricción, esta no debería resbalar sobre la superficie del cubo. Se quedaría "pegada" a él y ambos caerían de manera más compacta.
+
+Nota: el efecto del material utilizado se verá mejor en el ejercicio 05 que se expone más adelante.
 
 El material utilizado:
 
@@ -88,7 +90,7 @@ El material utilizado:
 
 ![Demostración Situación 8](GitImages/Situación08-P03-II.gif)
 
-La escena se mantiene estática. El cubo reposa en el plano y la esfera flota. Al estar marcada como `Trigger`, la esfera se convierte en un volumen intangible que no genera respuesta física, ideal para detectar eventos de paso (`OnTriggerEnter`) sin obstaculizar el movimiento.
+La escena se mantiene estática. El cubo reposa en el plano y la esfera flota. Al estar marcada como `isTrigger`, la esfera se convierte en un volumen intangible que no genera respuesta física, ideal para detectar eventos de paso (`OnTriggerEnter`) sin obstaculizar el movimiento.
 
 ### Situación 9: Esfera Trigger física
 * **Plano:** `Rigidbody` cinemático.
