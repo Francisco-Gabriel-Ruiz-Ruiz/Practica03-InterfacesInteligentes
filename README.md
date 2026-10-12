@@ -10,6 +10,10 @@ La metodología seguida para su realización es la siguiente:
 * Creación del directorio **Scripts** con todo el código C# desarrollado para la segunda parte.
 * División de la práctica en escenas específicas según la necesidad de la situación o ejercicio.
 
+[Enlace a la hoja de experimentos/situaciones propuestas.](https://docs.google.com/document/d/1xuS0TPw60dGrWRlk0i0DOMYCXG8RRI68V-GyzjVtDRo/edit?tab=t.0)
+
+[Enlace a la hoja de problemas.](https://docs.google.com/document/d/1rfIMdkudzOZIKlBVq1KNcCnE-7IC48c0jWGYRMmHbOU/edit?tab=t.0)
+
 ## Parte 1: Experimentación con Rigidbody y Colliders
 
 En esta primera parte, partimos de una escena base con un Plano, un Cubo (en $y=0.5$) y una Esfera suspendida en el aire encima del cubo. Se han probado 9 configuraciones distintas:
