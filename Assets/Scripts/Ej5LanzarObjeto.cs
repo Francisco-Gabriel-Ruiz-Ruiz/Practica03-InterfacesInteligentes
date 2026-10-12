@@ -3,10 +3,11 @@ using UnityEngine;
 public class Ej5LanzarObjeto : MonoBehaviour
 {
     public float multiplicadorFuerza = 1f;
-    public Vector3 throwDirection = new Vector3(0f, 0f, 10f);
+    public Vector3 throwDirection = new Vector3(0f, 5f, 10f);
 
     private Rigidbody rigidbody;
     private float fireInput;
+    private bool objectThrown;
 
     void Start() {
         if (Mathf.Approximately(0f, multiplicadorFuerza)) {
@@ -16,6 +17,7 @@ public class Ej5LanzarObjeto : MonoBehaviour
         if (!rigidbody) {
             Debug.LogError("¡El GameObject a lanzar no tiene Rigidbody!");
         }
+        objectThrown = false;
     }
 
     void Update() {
@@ -26,7 +28,11 @@ public class Ej5LanzarObjeto : MonoBehaviour
         if (!rigidbody) {
             return;
         }
-        rigidbody.AddForce(throwDirection * fireInput, ForceMode.Impulse);
+        if (!objectThrown && fireInput > 0f) {
+            objectThrown = true;
+            rigidbody.AddForce(throwDirection * multiplicadorFuerza, ForceMode.Impulse);
+        }
+        
     }
 
 }

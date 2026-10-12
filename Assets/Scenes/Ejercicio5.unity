@@ -280,7 +280,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Ej5LanzarObjeto
   multiplicadorFuerza: 1
-  throwDirection: {x: 0, y: 0, z: 10}
+  throwDirection: {x: 0, y: 5, z: 10}
 --- !u!65 &699343928
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -685,7 +685,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Ej5LanzarObjeto
   multiplicadorFuerza: 1
-  throwDirection: {x: 0, y: 0, z: 10}
+  throwDirection: {x: 0, y: 5, z: 10}
 --- !u!65 &1847235306
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -840,7 +840,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Ej5LanzarObjeto
   multiplicadorFuerza: 1
-  throwDirection: {x: 0, y: 0, z: 10}
+  throwDirection: {x: 0, y: 5, z: 10}
 --- !u!65 &2107296956
 BoxCollider:
   m_ObjectHideFlags: 0
