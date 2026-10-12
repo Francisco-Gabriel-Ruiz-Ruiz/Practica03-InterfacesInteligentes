@@ -7,7 +7,7 @@ public class Ej6PerseguirObjetivo : MonoBehaviour
     public GameObject obstacle;
     public Material newMaterialForObstacle;
 
-    // private bool cuboAlcanzado = false;
+    private bool cuboAlcanzado;
     private Collider myCollider;
     private Collider obstacleCollider;
 
@@ -32,6 +32,7 @@ public class Ej6PerseguirObjetivo : MonoBehaviour
         if (!obstacleCollider) {
             Debug.LogError("¡No hay Collider asignado al obstáculo de este objeto!");
         }
+        cuboAlcanzado = false;
     }
 
     // Update is called once per frame
@@ -68,7 +69,8 @@ public class Ej6PerseguirObjetivo : MonoBehaviour
         if (!myCollider || !obstacleCollider) {
             return;
         }
-        if (obstacleCollider.bounds.Intersects(myCollider.bounds)) {
+        if (!cuboAlcanzado && obstacleCollider.bounds.Intersects(myCollider.bounds)) {
+            cuboAlcanzado = true;
             Debug.Log("La esfera ha alcanzado al obstáculo.");
             MeshRenderer rendererCubo = obstacle.GetComponent<MeshRenderer>();
             if (rendererCubo != null) {
