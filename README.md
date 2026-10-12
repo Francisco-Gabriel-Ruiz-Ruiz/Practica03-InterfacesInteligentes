@@ -140,6 +140,14 @@ En cuanto al script:
 
 El jugador se desplaza entrando y saliendo de diferentes cubos translúcidos marcados como Triggers. Al entrar cambian propiedades del entorno o del propio jugador y al salir se revierten a la normalidad.
 
+Lo que modifica cada zona en el GIF:
+* Zona amarilla: modifica la luz
+* Zona violeta: cambia el color del jugador (a blanco)
+* Zona amarilla con gradiente violeta: altera tanto la luz como el color del jugador.
+* Zona roja: cambia la estadística/variable del jugador Damage (daño). Por consola se muestran los cambios y en el Inspector se puede ver el cambio en tiempo real.
+
+Se usó un material transparente para las zonas para poder ver bien cómo el jugador las atraviesa.
+
 En cuanto a la implementación:
 * Hacemos uso intensivo de `OnTriggerEnter` y `OnTriggerExit`.
 * En todos los scripts se verifica previamente el `tag` del objeto colisionado usando `other.gameObject.CompareTag("Player")`.
@@ -151,6 +159,8 @@ En cuanto a la implementación:
 * Código desarrollado en [Scripts/Ej4RecolectableDetecta.cs](Scripts/Ej4RecolectableDetecta.cs)
 * Demostración en GIF:
 ![Demostración ejercicio 4](GitImages/Ejercicio04-P03-II.gif)
+
+En el GIF se usa a un jugador negro que no tiene el Layer de Player para mostrar que solo el jugador interactúa con los enemigos. Los enemigos no interactúan entre sí. Los recolectables interactúan con todo menos con los enemigos.
 
 Este ejercicio requería usar el menú **Project Settings > Physics**.
 * Configuramos tres `Layers` nuevos: Player, Enemigo ("Enemy") y Recolectable ("Collectable").
@@ -167,7 +177,9 @@ He aquí la Collision Matrix configurada:
 * Demostración en GIF:
 ![Demostración ejercicio 5](GitImages/Ejercicio05-P03-II.gif)
 
-Vemos tres objetos lanzados al mismo tiempo, los cuales caen en diferentes superficies (resbaladiza, rugosa, de alto rebote) comprobando la reacción que generan los `Physic Materials`.
+Vemos tres objetos lanzados al mismo tiempo, los cuales caen en diferentes superficies (resbaladiza para el color hielo, rugosa para el color verde oscuro y de alto rebote para el color rosa chicle) comprobando la reacción que generan los `Physic Materials`.
+
+Vemos que el cubo color hielo se desliza mucho, el rugoso tiene dificultades para avanzar (el primero en quedarse quieto) y el rosa chicle rebota mucho.
 
 En cuanto al script:
 * Se ha configurado un input llamado `LanzarObjeto` que detecta un pulsador mediante `Input.GetAxis()`.
@@ -193,6 +205,8 @@ Captura de los materiales utilizados:
 ![Demostración ejercicio 6](GitImages/Ejercicio06-P03-II.gif)
 
 La esfera persigue al cilindro en línea recta. Cuando su volumen se solapa con el cubo intermedio (recordemos que aquí ningún objeto tiene `Rigidbody`), el cubo cambia de color como si fuese una colisión física.
+
+Se usó un material transparente para poder ver bien cómo lo atraviesa.
 
 En cuanto al script:
 * **Movimiento:** Ya que no interviene la gravedad ni las físicas, actualizamos directamente la posición usando `Vector3.MoveTowards()` en `Update()`, el cual se desplaza elegantemente sin pasarse de la posición final `targetPosition`.
