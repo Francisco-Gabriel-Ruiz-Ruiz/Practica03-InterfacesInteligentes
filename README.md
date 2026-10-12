@@ -77,6 +77,10 @@ El comportamiento es igual al anterior pero con un efecto exagerado. La diferenc
 
 Al igual que en la situación 4, todo cae debido a que el plano es dinámico. Sin embargo, gracias al material físico aplicado a la esfera con alta fricción, esta no resbala sobre la superficie del cubo. Se queda "pegada" a él y ambos caen de manera más compacta.
 
+El material utilizado:
+
+![Captura material rugoso](GitImages/CapturaMaterialRugoso-P03-II.png)
+
 ### Situación 8: Esfera Trigger no física
 * **Plano:** `Rigidbody` cinemático.
 * **Cubo:** `Rigidbody` dinámico.
@@ -170,7 +174,15 @@ En cuanto al script:
 
 He aquí el input `LanzarObjeto` configurado:
 
-![Collision Matrix configurada](GitImages/CapturaLanzarObjetoInputManager.png)
+![Collision Matrix configurada](GitImages/CapturaLanzarObjetoInputManager-P03-II.png)
+
+Captura de los materiales utilizados:
+
+![Captura material resbaladizo](GitImages/CapturaMaterialResbaladizo-P03-II.png)
+
+![Captura material rugoso](GitImages/CapturaMaterialRugoso-P03-II.png)
+
+![Captura material rebote alto](GitImages/CapturaMaterialReboteAlto-P03-II.png)
 
 ### Ejercicio 6: Intersección Manual de Componentes sin Rigidbody
 
