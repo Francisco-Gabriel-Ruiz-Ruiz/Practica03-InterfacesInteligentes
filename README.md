@@ -109,7 +109,7 @@ La esfera cae por la gravedad (ya que es un objeto dinámico), pero al ser un `T
 
 ### Ejercicio 1: Control de Personaje Físico
 
-* Código desarrollado en [Scripts/Ej1PlayerMovement.cs](Scripts/Ej1PlayerMovement.cs)
+* Código desarrollado en [Assets/Scripts/Ej1PlayerMovement.cs](Assets/Scripts/Ej1PlayerMovement.cs)
 * Demostración en GIF:
 ![Demostración ejercicio 1](GitImages/Ejercicio01-P03-II.gif)
 
@@ -121,7 +121,7 @@ En cuanto al script:
 
 ### Ejercicio 2: Colisiones, Cambio de Color y Mensajes por Consola
 
-* Código desarrollado en [Scripts/Ej2ColisionInformeColor.cs](Scripts/Ej2ColisionInformeColor.cs)
+* Código desarrollado en [Assets/Scripts/Ej2ColisionInformeColor.cs](Assets/Scripts/Ej2ColisionInformeColor.cs)
 * Demostración en GIF:
 ![Demostración ejercicio 2](GitImages/Ejercicio02-P03-II.gif)
 
@@ -135,10 +135,10 @@ En cuanto al script:
 ### Ejercicio 3: Zonas Trigger (Cambios de Luz, Color y Estadísticas)
 
 * Códigos desarrollados en: 
-  - [Scripts/Ej3ZonaCambioColorPersonaje.cs](Scripts/Ej3ZonaCambioColorPersonaje.cs)
-  - [Scripts/Ej3ZonaCambioLuz.cs](Scripts/Ej3ZonaCambioLuz.cs)
-  - [Scripts/Ej3ZonaAumentoDamage.cs](Scripts/Ej3ZonaAumentoDamage.cs)
-  - [Scripts/Ej3PlayerStats.cs](Scripts/Ej3PlayerStats.cs)
+  - [Assets/Scripts/Ej3ZonaCambioColorPersonaje.cs](Assets/Scripts/Ej3ZonaCambioColorPersonaje.cs)
+  - [Assets/Scripts/Ej3ZonaCambioLuz.cs](Assets/Scripts/Ej3ZonaCambioLuz.cs)
+  - [Assets/Scripts/Ej3ZonaAumentoDamage.cs](Assets/Scripts/Ej3ZonaAumentoDamage.cs)
+  - [Assets/Scripts/Ej3PlayerStats.cs](Assets/Scripts/Ej3PlayerStats.cs)
 * Demostración en GIF:
 ![Demostración ejercicio 3](GitImages/Ejercicio03-P03-II.gif)
 
@@ -160,7 +160,7 @@ En cuanto a la implementación:
 
 ### Ejercicio 4: Filtros y Matriz de Colisiones por Capas
 
-* Código desarrollado en [Scripts/Ej4RecolectableDetecta.cs](Scripts/Ej4RecolectableDetecta.cs)
+* Código desarrollado en [Assets/Scripts/Ej4RecolectableDetecta.cs](Assets/Scripts/Ej4RecolectableDetecta.cs)
 * Demostración en GIF:
 ![Demostración ejercicio 4](GitImages/Ejercicio04-P03-II.gif)
 
@@ -177,7 +177,7 @@ He aquí la Collision Matrix configurada:
 
 ### Ejercicio 5: Materiales Físicos y Lanzamiento mediante Fuerzas
 
-* Código desarrollado en [Scripts/Ej5LanzarObjeto.cs](Scripts/Ej5LanzarObjeto.cs)
+* Código desarrollado en [Assets/Scripts/Ej5LanzarObjeto.cs](Assets/Scripts/Ej5LanzarObjeto.cs)
 * Demostración en GIF:
 ![Demostración ejercicio 5](GitImages/Ejercicio05-P03-II.gif)
 
@@ -204,7 +204,7 @@ Captura de los materiales utilizados:
 
 ### Ejercicio 6: Intersección Manual de Componentes sin Rigidbody
 
-* Código desarrollado en [Scripts/Ej6PerseguirObjetivo.cs](Scripts/Ej6PerseguirObjetivo.cs)
+* Código desarrollado en [Assets/Scripts/Ej6PerseguirObjetivo.cs](Assets/Scripts/Ej6PerseguirObjetivo.cs)
 * Demostración en GIF:
 ![Demostración ejercicio 6](GitImages/Ejercicio06-P03-II.gif)
 
